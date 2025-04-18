@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kologo & Frère - La Qualité est Primordiale</title>
+    <meta name="description" content="Kologo & Frère - Des vêtements de qualité exceptionnelle. La qualité est notre signature.">
+
+    <!-- Ajout balises Open Graph -->
+    <meta property="og:title" content="Kologo & Frère - La Qualité est Primordiale">
+    <meta property="og:description" content="Des vêtements de qualité exceptionnelle. La qualité est notre signature.">
+    <meta property="og:image" content="https://votresite.com/images/logo-social.jpg">
+    <meta property="og:url" content="https://votresite.com/">
+
+    <!-- Ajout balisage sémantique produit -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Chemise Premium",
+      "description": "Chemise en coton premium avec broderies artisanales",
+      "brand": {
+        "@type": "Brand",
+        "name": "Kologo & Frère"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "45000",
+        "priceCurrency": "XOF"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #17202a;
+            --accent-color: #f1c40f;
+            --text-color: #333333;
+            --hero-bg-image: url('texture-tissu.jpg');
+            --hero-overlay-opacity: 0.3;
+            --body-bg: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--body-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 1.2rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo::before {
+            content: "★";
+            margin-right: 10px;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .logo::after {
+            content: "La qualité est primordiale";
+            margin-left: 15px;
+            font-size: 1rem;
+            color: white;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 0.5rem 0;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        nav ul li.active a {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--secondary-color);
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--hero-bg-image) center/cover no-repeat;
+            opacity: var(--hero-overlay-opacity);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background-color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 6rem 0;
+            background: var(--body-bg);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background-color: var(--accent-color);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .product-img {
+            height: 350px;
+            overflow: hidden;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-img img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.8rem;
+            text-align: center;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .product-price {
+            font-weight: bold;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-title::after {
+            background-color: white;
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .phone-number {
+            font-size: 1.8rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            margin: 1.5rem 0;
+            display: inline-block;
+        }
+
+        /* Admin Login Section */
+        .admin-login {
+            padding: 6rem 0;
+            background: var(--body-bg);
+        }
+
+        .login-form {
+            background-color: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.2);
+        }
+
+        /* Admin Panel Section */
+        .admin-panel {
+            padding: 6rem 0;
+            display: none;
+            background: var(--body-bg);
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+        }
+
+        .admin-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+        }
+
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* Nouveau style pour la section de personnalisation */
+        .customization-form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 3rem;
+        }
+
+        .customization-form h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: var(--secondary-color);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-col {
+            flex: 1;
+        }
+
+        .preview-box {
+            width: 100%;
+            height: 100px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            margin-top: 10px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .bg-options {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .bg-option {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .bg-option:hover {
+            transform: scale(1.05);
+        }
+
+        .bg-option.selected {
+            border-color: var(--accent-color);
+        }
+
+        .upload-form {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .upload-form h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: var(--secondary-color);
+        }
+
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--accent-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(241, 196, 15, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Product Management */
+        .product-management {
+            margin-top: 4rem;
+        }
+
+        .products-list {
+            margin-top: 2rem;
+        }
+
+        .product-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .edit-btn, .delete-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .edit-btn {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+        }
+
+        .delete-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .edit-btn:hover, .delete-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .social-icons {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .logo::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                margin-top: 1.5rem;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            nav ul li {
+                margin: 0.5rem 1rem;
+            }
+
+            .hero {
+                height: 80vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .product-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .product-actions {
+                align-self: flex-end;
+            }
+
+            .form-row {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: 70vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .product-img {
+                height: 280px;
+            }
+
+            .phone-number {
+                font-size: 1.4rem;
+            }
+
+            .upload-form, .login-form, .customization-form {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Kologo & Frères</div>
+                <nav>
+                    <ul>
+                        <li class="active"><a href="#home">Accueil</a></li>
+                        <li><a href="#products">Nos produits</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#admin">Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>L'excellence est à votre portée.</h1>
+                <p>Chez Kologo & Frère, chaque pièce est conçue avec soin et passion, parce que pour nous, la qualité est primordiale.</p>
+                <a href="#products" class="btn">Explorer la collection</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Nos Collections</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 3rem;">Chaque pièce est unique, comme vous 😊</p>
+            
+            <div class="products-grid" id="productsContainer">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="chemise-premium.jpg" alt="Chemise Premium">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Chemise Premium</h3>
+                        <p class="product-price">45,000 FCFA</p>
+                        <a href="#contact" class="btn">Commander</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="costume-sur-mesure.jpg" alt="Costume sur Mesure">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Costume sur Mesure</h3>
+                        <p class="product-price">75,000 FCFA</p>
+                        <a href="#contact" class="btn">Commander</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="robe-traditionnelle.jpg" alt="Robe Traditionnelle">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Robe Traditionnelle</h3>
+                        <p class="product-price">55,000 FCFA</p>
+                        <a href="#contact" class="btn">Commander</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous</h2>
+            <div class="contact-info">
+                <p>Pour commander ou obtenir des informations sur nos produits :</p>
+                <p class="phone-number">+226 07890303</p>
+                <p>Disponible du lundi au samedi de 7h à 19h</p>
+                <p>Ou via WhatsApp en cliquant ci-dessous :</p>
+                <a href="https://wa.me/22607890303" class="btn" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-login" id="admin">
+        <div class="container">
+            <div class="login-form">
+                <h2>Connexion Admin</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Nom d'utilisateur</label>
+                        <input type="text" id="username" name="username" placeholder="Entrez votre nom d'utilisateur" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" placeholder="Entrez votre mot de passe" required>
+                    </div>
+                    <button type="submit" class="btn">Se connecter</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-panel" id="admin-panel">
+        <div class="container">
+            <div class="admin-header">
+                <h2 class="admin-title">Panneau d'Administration</h2>
+                <button class="logout-btn" id="logoutBtn">Déconnexion</button>
+            </div>
+            
+            <!-- Nouvelle section de personnalisation -->
+            <div class="customization-form">
+                <h3>Personnalisation de l'apparence</h3>
+                <form id="customizationForm">
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="heroBgImage">Image d'arrière-plan (Hero)</label>
+                                <input type="file" id="heroBgImage" name="heroBgImage" accept="image/*">
+                                <div class="preview-box" id="heroBgPreview" style="background-image: var(--hero-bg-image);"></div>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="heroOverlay">Opacité de l'overlay</label>
+                                <input type="range" id="heroOverlay" name="heroOverlay" min="0" max="1" step="0.1" value="0.3">
+                                <span id="overlayValue">30%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Arrière-plan général</label>
+                        <div class="bg-options">
+                            <div class="bg-option selected" style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);" data-bg="linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%)"></div>
+                            <div class="bg-option" style="background: #ffffff;" data-bg="#ffffff"></div>
+                            <div class="bg-option" style="background: #f9f9f9;" data-bg="#f9f9f9"></div>
+                            <div class="bg-option" style="background: linear-gradient(135deg, #e6f7ff 0%, #ccf2ff 100%);" data-bg="linear-gradient(135deg, #e6f7ff 0%, #ccf2ff 100%)"></div>
+                            <div class="bg-option" style="background: linear-gradient(135deg, #fff9e6 0%, #fff2cc 100%);" data-bg="linear-gradient(135deg, #fff9e6 0%, #fff2cc 100%)"></div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Appliquer les changements</button>
+                </form>
+            </div>
+            
+            <div class="upload-form">
+                <h3>Ajouter un nouveau produit</h3>
+                <form id="productForm" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="productName">Nom du produit</label>
+                        <input type="text" id="productName" name="productName" placeholder="Ex: Kologo Excellence" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Prix (FCFA)</label>
+                        <input type="number" id="productPrice" name="productPrice" placeholder="Ex: 45000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productDescription">Description</label>
+                        <textarea id="productDescription" name="productDescription" placeholder="Décrivez le produit en détail..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="productImage">Image du produit</label>
+                        <input type="file" id="productImage" name="productImage" accept="image/*" required>
+                        <div id="imagePreview" style="margin-top: 15px;"></div>
+                    </div>
+                    <button type="submit" class="btn">Publier le produit</button>
+                </form>
+            </div>
+            
+            <div class="product-management">
+                <h3>Gestion des produits</h3>
+                <div class="products-list" id="productsList">
+                    <!-- Les produits existants seront affichés ici -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="#home">Accueil</a>
+                    <a href="#products">Nos produits</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#admin">Admin</a>
+                </div>
+                
+                <p class="copyright">&copy; 2025 Kologo & Frère. Tous droits réservés.</p>
+                <p class="slogan">La qualité est primordiale</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Stockage des produits
+        let products = [
+            {
+                name: "Chemise Premium",
+                price: "45000",
+                image: "chemise-premium.jpg",
+                description: "Chemise en coton premium avec broderies artisanales"
+            },
+            {
+                name: "Costume sur Mesure",
+                price: "75000",
+                image: "costume-sur-mesure.jpg",
+                description: "Costume sur mesure en laine fine, parfait pour les occasions spéciales"
+            },
+            {
+                name: "Robe Traditionnelle",
+                price: "55000",
+                image: "robe-traditionnelle.jpg",
+                description: "Robe traditionnelle en tissu wax, pièce unique faite main"
+            }
+        ];
+
+        // Fonction pour afficher les produits dans la section collection
+        function displayProducts() {
+            const productsContainer = document.getElementById('productsContainer');
+            productsContainer.innerHTML = '';
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-img">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-price">${Number(product.price).toLocaleString('fr-FR')} FCFA</p>
+                        <a href="#contact" class="btn">Commander</a>
+                    </div>
+                `;
+                productsContainer.appendChild(productCard);
+            });
+        }
+
+        // Gestion de la connexion admin
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Mot de passe sécurisé (à remplacer par votre propre système d'authentification sécurisé)
+            const ADMIN_USERNAME = "Stive";
+            const ADMIN_PASSWORD = "Klg2003&&"; // À changer en production
+            
+            if(username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
+                // Masquer le formulaire de connexion
+                document.querySelector('.admin-login').style.display = 'none';
+                
+                // Afficher le panneau admin
+                document.querySelector('.admin-panel').style.display = 'block';
+                
+                // Mettre à jour le lien dans la navigation
+                document.querySelector('nav ul li a[href="#admin"]').textContent = 'Panneau Admin';
+                
+                // Afficher la liste des produits dans l'admin
+                displayAdminProducts();
+                
+                // Faire défiler jusqu'au panneau admin
+                window.scrollTo({
+                    top: document.getElementById('admin-panel').offsetTop - 80,
+                    behavior: 'smooth'
+                });
+
+                // Charger les personnalisations sauvegardées
+                loadCustomization();
+            } else {
+                showNotification('Identifiants incorrects', 'error');
+            }
+        });
+
+        // Gestion de la déconnexion
+        document.getElementById('logoutBtn').addEventListener('click', function() {
+            // Masquer le panneau admin
+            document.querySelector('.admin-panel').style.display = 'none';
+            
+            // Afficher le formulaire de connexion
+            document.querySelector('.admin-login').style.display = 'block';
+            
+            // Réinitialiser le formulaire de connexion
+            document.getElementById('loginForm').reset();
+            
+            // Mettre à jour le lien dans la navigation
+            document.querySelector('nav ul li a[href="#admin"]').textContent = 'Admin';
+            
+            // Faire défiler jusqu'au formulaire de connexion
+            window.scrollTo({
+                top: document.getElementById('admin').offsetTop - 80,
+                behavior: 'smooth'
+            });
+            
+            showNotification('Déconnexion réussie', 'success');
+        });
+
+        // Gestion de l'upload des produits avec prévisualisation d'image
+        document.getElementById('productImage').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                const previewContainer = document.getElementById('imagePreview');
+                
+                previewContainer.innerHTML = '';
+                
+                reader.onload = function(event) {
+                    const img = document.createElement('img');
+                    img.src = event.target.result;
+                    img.style.maxWidth = '100%';
+                    img.style.maxHeight = '200px';
+                    img.style.borderRadius = '4px';
+                    img.style.marginTop = '10px';
+                    img.style.border = '1px solid #eee';
+                    previewContainer.appendChild(img);
+                }
+                
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Fonction pour afficher les produits dans l'admin
+        function displayAdminProducts() {
+            const productsList = document.getElementById('productsList');
+            productsList.innerHTML = '';
+            
+            products.forEach((product, index) => {
+                const productItem = document.createElement('div');
+                productItem.className = 'product-item';
+                productItem.innerHTML = `
+                    <div>
+                        <img src="${product.image}" alt="${product.name}">
+                        <h4>${product.name}</h4>
+                        <p>${Number(product.price).toLocaleString()} FCFA</p>
+                        <p><small>${product.description}</small></p>
+                    </div>
+                    <div class="product-actions">
+                        <button class="edit-btn" data-index="${index}">Modifier</button>
+                        <button class="delete-btn" data-index="${index}">Supprimer</button>
+                    </div>
+                `;
+                productsList.appendChild(productItem);
+            });
+            
+            // Ajout des écouteurs d'événements pour les boutons
+            document.querySelectorAll('.delete-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    products.splice(index, 1);
+                    displayAdminProducts();
+                    displayProducts();
+                    showNotification('Produit supprimé avec succès', 'success');
+                });
+            });
+        }
+
+        // Gestion de l'ajout de nouveaux produits
+        document.getElementById('productForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupération des données du formulaire
+            const productName = document.getElementById('productName').value;
+            const productPrice = document.getElementById('productPrice').value;
+            const productDescription = document.getElementById('productDescription').value;
+            const productImage = document.getElementById('productImage').files[0];
+            
+            if (!productImage) {
+                showNotification('Veuillez sélectionner une image', 'error');
+                return;
+            }
+            
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                // Ajout du nouveau produit
+                const newProduct = {
+                    name: productName,
+                    price: productPrice,
+                    description: productDescription,
+                    image: event.target.result
+                };
+                
+                products.push(newProduct);
+                
+                // Mise à jour des affichages
+                displayProducts();
+                displayAdminProducts();
+                
+                // Réinitialisation du formulaire
+                e.target.reset();
+                document.getElementById('imagePreview').innerHTML = '';
+                
+                showNotification(`"${productName}" ajouté avec succès`, 'success');
+            };
+            
+            reader.readAsDataURL(productImage);
+        });
+
+        // Sauvegarde des préférences de personnalisation
+        function saveCustomization() {
+            const customization = {
+                heroBg: document.documentElement.style.getPropertyValue('--hero-bg-image') || getComputedStyle(document.documentElement).getPropertyValue('--hero-bg-image'),
+                overlay: document.documentElement.style.getPropertyValue('--hero-overlay-opacity') || getComputedStyle(document.documentElement).getPropertyValue('--hero-overlay-opacity'),
+                bodyBg: document.documentElement.style.getPropertyValue('--body-bg') || getComputedStyle(document.documentElement).getPropertyValue('--body-bg')
+            };
+            localStorage.setItem('siteCustomization', JSON.stringify(customization));
+        }
+
+        // Chargement des préférences de personnalisation
+        function loadCustomization() {
+            const saved = localStorage.getItem('siteCustomization');
+            if (saved) {
+                const customization = JSON.parse(saved);
+                document.documentElement.style.setProperty('--hero-bg-image', customization.heroBg);
+                document.documentElement.style.setProperty('--hero-overlay-opacity', customization.overlay);
+                document.documentElement.style.setProperty('--body-bg', customization.bodyBg);
+                
+                // Mise à jour des prévisualisations
+                document.getElementById('heroBgPreview').style.backgroundImage = customization.heroBg;
+                const overlayValue = parseFloat(customization.overlay);
+                document.getElementById('heroOverlay').value = overlayValue;
+                document.getElementById('overlayValue').textContent = `${Math.round(overlayValue * 100)}%`;
+                
+                // Mise à jour de la sélection des options d'arrière-plan
+                document.querySelectorAll('.bg-option').forEach(option => {
+                    option.classList.remove('selected');
+                    if (option.dataset.bg === customization.bodyBg) {
+                        option.classList.add('selected');
+                    }
+                });
+            }
+        }
+
+        // Nouveau code pour la personnalisation
+        document.addEventListener('DOMContentLoaded', function() {
+            displayProducts();
+            
+            // Gestion de la prévisualisation de l'image hero
+            document.getElementById('heroBgImage').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        document.getElementById('heroBgPreview').style.backgroundImage = `url('${event.target.result}')`;
+                        document.documentElement.style.setProperty('--hero-bg-image', `url('${event.target.result}')`);
+                        saveCustomization();
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Gestion de l'opacité
+            const overlaySlider = document.getElementById('heroOverlay');
+            const overlayValue = document.getElementById('overlayValue');
+            
+            overlaySlider.addEventListener('input', function() {
+                const value = Math.round(this.value * 100);
+                overlayValue.textContent = `${value}%`;
+                document.documentElement.style.setProperty('--hero-overlay-opacity', this.value);
+                saveCustomization();
+            });
+
+            // Gestion des options d'arrière-plan
+            document.querySelectorAll('.bg-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    document.querySelectorAll('.bg-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    this.classList.add('selected');
+                    document.documentElement.style.setProperty('--body-bg', this.dataset.bg);
+                    saveCustomization();
+                });
+            });
+
+            // Gestion du formulaire de personnalisation
+            document.getElementById('customizationForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                showNotification('Personnalisation appliquée avec succès', 'success');
+            });
+        });
+
+        // Fonction pour afficher des notifications
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.style.position = 'fixed';
+            notification.style.top = '20px';
+            notification.style.right = '20px';
+            notification.style.backgroundColor = type === 'error' ? '#e74c3c' : '#2ecc71';
+            notification.style.color = 'white';
+            notification.style.padding = '15px 25px';
+            notification.style.borderRadius = '4px';
+            notification.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            notification.style.zIndex = '1000';
+            notification.style.animation = 'fadeIn 0.5s, fadeOut 0.5s 2.5s forwards';
+            notification.innerHTML = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Animation pour le défilement fluide vers les ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Mise à jour du menu actif
+                    document.querySelectorAll('nav ul li').forEach(li => {
+                        li.classList.remove('active');
+                    });
+                    this.parentElement.classList.add('active');
+                }
+            });
+        });
+
+        // Détection du scroll pour le menu actif
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            document.querySelectorAll('nav ul li').forEach(li => {
+                li.classList.remove('active');
+                if (li.querySelector('a').getAttribute('href') === '#' + current) {
+                    li.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
